@@ -1,0 +1,28 @@
+.nav--container {
+	.nav--menu__container {
+		display: none;
+	}
+
+	.nav--menu__container.open {
+		display: flex;
+	}
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $primary-color;
+	height: 40px;
+
+	a {
+		display: flex;
+		align-items: center;
+		color: $secondary-color;
+	}
+
+	i {
+		font-size: 1.5em;
+		margin: 0.5em;
+	}
+}

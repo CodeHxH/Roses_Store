@@ -1,0 +1,29 @@
+.header--container {
+	background: url('../../img/background_header.jpg') no-repeat center
+		center/cover;
+	height: 600px;
+	display: flex;
+	align-items: flex-end;
+
+	* {
+		color: $secondary-color;
+	}
+}
+
+.info--header {
+	padding: 2em;
+
+	h1 {
+		font-size: 2em;
+	}
+
+	* {
+		margin: 1em 0;
+	}
+
+	div {
+		display: flex;
+		justify-content: center;
+		margin-top: 2em;
+	}
+}

@@ -1,0 +1,9 @@
+$primary-color: #c10016;
+$primary-color-hover: #970012;
+$secondary-color: #ffffff;
+$secondary-color_hover: #d1d1d1;
+
+@import './components/global';
+@import './components/nav';
+@import './components/header';
+@import './components/catalogo';
