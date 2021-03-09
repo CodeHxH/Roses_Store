@@ -15,13 +15,18 @@
 </head>
 <body>
 
+    {{>menu}}
     {{>navigation}}
+    {{>product_overlay}}
 
     <main class="container">
         {{>messages}}
         {{>errors}}
         {{{body}}}
     </main>
+
+    {{!-- CUSTOM JS --}}
+    <script src="main.js"></script>
 
 </body>
 </html>

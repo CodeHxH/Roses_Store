@@ -1,13 +1,4 @@
-.nav--container {
-	.nav--menu__container {
-		display: none;
-	}
-
-	.nav--menu__container.open {
-		display: flex;
-	}
-}
-
+// Barra de navegación
 nav {
 	display: flex;
 	align-items: center;
@@ -24,5 +15,83 @@ nav {
 	i {
 		font-size: 1.5em;
 		margin: 0.5em;
+	}
+
+	.nav--icon {
+		position: relative;
+		z-index: 100000;
+	}
+}
+
+// Menu desplegable
+.nav--menu__container {
+	display: none;
+	position: fixed;
+	background-color: $overlay-bg;
+	height: 100vh;
+	width: 100vw;
+	z-index: 10000;
+	flex-direction: column;
+	justify-content: space-between;
+
+	* {
+		color: $secondary-color;
+	}
+
+	.singup {
+		display: flex;
+		justify-content: flex-end;
+		margin: 1em;
+
+		a {
+			display: flex;
+			align-items: center;
+		}
+
+		i {
+			font-size: 1.5em;
+		}
+	}
+
+	.nav--menu {
+		li {
+			margin: 5em 0;
+			text-align: center;
+
+			a {
+				font-size: 1.25em;
+			}
+		}
+	}
+
+	.redes--menu {
+		display: flex;
+		justify-content: center;
+		margin: 1em;
+
+		ul {
+			display: flex;
+
+			li {
+				margin: 0.5rem;
+			}
+
+			i {
+				font-size: 1.7rem;
+			}
+		}
+	}
+}
+
+.nav--menu__container.open {
+	display: flex;
+}
+
+.nav--icon.open {
+	position: fixed;
+	left: 2px;
+	top: 2px;
+	i {
+		font-size: 1.5em;
 	}
 }

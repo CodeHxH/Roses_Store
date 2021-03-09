@@ -1,0 +1,51 @@
+.footer--bg {
+	background: radial-gradient($primary-color, $primary-color-hover);
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	margin-top: 2em;
+
+	* {
+		color: $secondary-color;
+	}
+
+	.links--footer {
+		display: flex;
+		flex-direction: column;
+		margin: 1.5em 0;
+
+		a {
+			text-align: center;
+			margin: 1em 0;
+		}
+	}
+}
+
+.redes--container {
+	margin: auto;
+	ul {
+		display: flex;
+
+		li {
+			margin: 0.5rem;
+		}
+
+		i {
+			font-size: 1.7rem;
+		}
+	}
+}
+
+.copyright {
+	background-color: $gray-color;
+	color: $secondary-color;
+	padding: 1em;
+
+	footer {
+		text-align: center;
+		font-size: 0.8em;
+	}
+}

@@ -2,8 +2,15 @@ $primary-color: #c10016;
 $primary-color-hover: #970012;
 $secondary-color: #ffffff;
 $secondary-color_hover: #d1d1d1;
+$third-color: #000;
+$gray-color: #1c1c1c;
+$crimson-color: #6d000d;
+$overlay-bg: rgba(0, 0, 0, 0.98);
 
 @import './components/global';
 @import './components/nav';
 @import './components/header';
 @import './components/catalogo';
+@import './components/overlay';
+@import './components/footer';
+@import './components/contact';

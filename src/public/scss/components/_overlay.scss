@@ -1,0 +1,68 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $overlay-bg;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.overlay.active {
+	display: flex;
+}
+
+.overlay--target {
+	background-color: $secondary-color;
+	position: relative;
+	border-radius: 5px;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	img {
+		height: 280px;
+		width: 280px;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+
+	.btn--close {
+		cursor: pointer;
+		position: absolute;
+		right: -25px;
+		top: -25px;
+
+		i {
+			font-size: 1.75em;
+			color: $secondary-color;
+		}
+	}
+
+	.price {
+		font-size: 1.75em;
+	}
+
+	.name {
+		font-size: 1.5em;
+		margin: 1em 0;
+	}
+
+	.overlay--target__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 3em;
+
+		button {
+			color: $secondary-color;
+		}
+	}
+}

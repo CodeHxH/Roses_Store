@@ -1,7 +1,12 @@
 const indexCtrl = {};
 
+const Products = require('../models/Product');
+
 indexCtrl.renderIndex = async (req, res) => {
-	res.render('/');
+	const products = await Products.find().sort({
+		createdAt: 'desc',
+	});
+	res.render('index', { products });
 };
 
 indexCtrl.renderAbout = (req, res) => {
