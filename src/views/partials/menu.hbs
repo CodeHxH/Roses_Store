@@ -1,10 +1,20 @@
 <div class="nav--menu__container">
-	{{!-- Boton de inicio de sesión --}}
-    <div class="singup">
-        <a href="#">
-            <p>Iniciar sesión &nbsp;</p><i class="bi bi-person-circle"></i>
-        </a>
-    </div>
+
+	{{!-- Botones del menú --}}
+	<div class="nav--menu__btn">
+		{{#if user}}
+		{{!-- Boton finalizar sesión --}}
+		<ul class="singup">
+			<li><a href="/users/logout" class="btn-out">Salir</a></li>
+		</ul>
+		{{else}}
+		{{!-- Boton de inicio de sesión --}}
+		<ul class="singup">
+			<li><a href="/users/singin" class="btn-out">Iniciar sesión</a></li>
+			<li><a href="/users/singup" class="btn-out">Registro</a></li>
+		</ul>
+		{{/if}}
+	</div>
 
 	{{!-- Links del menú --}}
     <ul class="nav--menu">

@@ -44,14 +44,14 @@ usersCtrl.renderSingInForm = (req, res) => {
 
 usersCtrl.singin = passport.authenticate('local', {
 	failureRedirect: '/users/singin',
-	successRedirect: '/notes',
+	successRedirect: '/',
 	failureFlash: true,
 });
 
 usersCtrl.logout = (req, res) => {
 	req.logout();
 	req.flash('success_msg', 'You are logged out now.');
-	res.redirect('/users/singin');
+	res.redirect('/');
 };
 
 module.exports = usersCtrl;

@@ -6,8 +6,10 @@ const {
 	renderAbout,
 } = require('../controllers/index.controllers');
 
+// Render index
 router.get('/', renderIndex);
 
+// Render about
 router.get('/about', renderAbout);
 
 router.get('/products');

@@ -21,6 +21,7 @@ li {
 
 .btn {
 	background-color: $primary-color;
+	color: $secondary-color;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -44,6 +45,20 @@ li {
 
 .btn-inv:hover {
 	background-color: $secondary-color-hover;
+	transition: 0.5s;
+}
+
+.btn-out {
+	border: 1px solid $secondary-color;
+	padding: 0.25rem;
+	border-radius: 5px;
+	color: $secondary-color;
+}
+
+.btn-out:hover {
+	border: 1px solid $primary-color;
+	background-color: $secondary-color;
+	color: $primary-color;
 	transition: 0.5s;
 }
 

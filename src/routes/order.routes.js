@@ -3,10 +3,10 @@ const router = Router();
 
 const {} = require('../controllers/order.controllers');
 
-// Render buy request
+// Render purchase request
 router.get('/request');
 
-// Send buy request
+// Send purchase request
 router.post('/request/send-request');
 
 module.exports = router;

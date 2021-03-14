@@ -4,7 +4,7 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 	background-color: $primary-color;
-	height: 40px;
+	height: 50px;
 
 	a {
 		display: flex;
@@ -20,6 +20,14 @@ nav {
 	.nav--icon {
 		position: relative;
 		z-index: 100000;
+	}
+
+	.singup {
+		display: flex;
+
+		li {
+			margin-right: 0.5em;
+		}
 	}
 }
 
@@ -37,48 +45,46 @@ nav {
 	* {
 		color: $secondary-color;
 	}
+}
+
+.nav--menu__btn {
+	display: flex;
+	justify-content: flex-end;
 
 	.singup {
 		display: flex;
-		justify-content: flex-end;
-		margin: 1em;
+		margin-top: 1em;
+		li {
+			margin-right: 0.5em;
+		}
+	}
+}
+
+.nav--menu {
+	li {
+		margin: 5em 0;
+		text-align: center;
 
 		a {
-			display: flex;
-			align-items: center;
+			font-size: 1.25em;
+		}
+	}
+}
+
+.redes--menu {
+	display: flex;
+	justify-content: center;
+	margin: 1em;
+
+	ul {
+		display: flex;
+
+		li {
+			margin: 0.5rem;
 		}
 
 		i {
-			font-size: 1.5em;
-		}
-	}
-
-	.nav--menu {
-		li {
-			margin: 5em 0;
-			text-align: center;
-
-			a {
-				font-size: 1.25em;
-			}
-		}
-	}
-
-	.redes--menu {
-		display: flex;
-		justify-content: center;
-		margin: 1em;
-
-		ul {
-			display: flex;
-
-			li {
-				margin: 0.5rem;
-			}
-
-			i {
-				font-size: 1.7rem;
-			}
+			font-size: 1.7rem;
 		}
 	}
 }

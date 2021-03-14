@@ -25,8 +25,11 @@
 
                 {{!-- Precio --}}
                 <p class="price"></p>
-                {{!-- Botón del carrito --}}
-                <button class="btn">Agregar al carrito</button>
+                {{!-- Botón del carrito --}} 
+                <form action="/cart/add-product" method="POST">
+                    <input type="hidden" name="ProductId" value="{{#each products}}{{_id}}{{/each}}">
+                    <button class="btn" id="product_state">Agregar al carrito</button>
+                </form>
 
             </div>
         </div>

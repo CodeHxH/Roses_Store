@@ -1,3 +1,4 @@
+// Variables
 $primary-color: #c10016;
 $primary-color-hover: #970012;
 $secondary-color: #ffffff;
@@ -7,6 +8,7 @@ $gray-color: #1c1c1c;
 $crimson-color: #6d000d;
 $overlay-bg: rgba(0, 0, 0, 0.98);
 
+// Importando componentes
 @import './components/global';
 @import './components/nav';
 @import './components/header';
@@ -14,3 +16,4 @@ $overlay-bg: rgba(0, 0, 0, 0.98);
 @import './components/overlay';
 @import './components/footer';
 @import './components/contact';
+@import './components/session';
