@@ -5,7 +5,7 @@ const Products = require('../models/Product');
 
 cartCtrl.addNewProduct = async (req, res) => {
 	// Verificando si el usuario ya tiene un carrito de compras
-	const UserCart = await Cart.find({ user: req.user.id });
+	let UserCart = await Cart.find({ user: req.user.id });
 	if (UserCart == false) {
 		// Creando un nuevo carrito de compras
 		const NewCart = new Cart({
@@ -14,7 +14,16 @@ cartCtrl.addNewProduct = async (req, res) => {
 		});
 		await NewCart.save();
 	}
-	console.log(UserCart);
+	UserCart = await Cart.find({ user: req.user.id });
+	// Obteniendo los valores del carrito
+	UserCart = UserCart[0];
+	const newProduct = UserCart.products;
+	const cartId = UserCart._id;
+	// Ingresando nuevo producto al array del carrito
+	newProduct.push(req.body.ProductId);
+	UserCart.products = newProduct;
+	// Actualizando carrito
+	await Cart.updateOne({ _id: cartId }, { products: newProduct });
 	res.redirect('/cart');
 };
 
