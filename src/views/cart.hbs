@@ -1,2 +1,35 @@
-<h2>CART</h2>
-<p>products</p>
+<div class="cart__main--container">
+
+    <div class="cart--container">
+        <div class="cart--header">
+            <h3>Tu lista de productos</h3>
+        </div>
+        {{#each UserCart}}
+            <div class="product__card--container">
+                <div class="product--card">
+                    <div class="cart--item">
+                        <h2>{{name}}</h2>
+                        <p>{{price}} $</p>
+                    </div>
+                </div>
+
+                <form action="/cart/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </form>
+
+            </div>
+        {{/each}}
+        <div class="line"></div>
+        <div class="Subtotal--container">
+            <p class="Subtotal">Subtotal</p>
+            <p class="Subtotal">100,00 $</p>
+        </div>
+    </div>
+    <div class="btn--right">
+        <a href="#" class="btn">Pagar</a>
+    </div>
+</div>
+

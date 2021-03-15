@@ -18,12 +18,14 @@ document
 			const description = elemento.parentNode.parentNode.dataset.description;
 			const price = elemento.parentNode.parentNode.dataset.price;
 			const name = elemento.parentNode.parentNode.dataset.name;
+			const id = elemento.parentNode.parentNode.dataset.productid;
 
 			overlay.classList.add('active');
 			document.querySelector('#overlay img').src = route;
 			document.querySelector('#overlay .description').innerHTML = description;
 			document.querySelector('#overlay .price').innerHTML = price + ' $';
 			document.querySelector('#overlay .name').innerHTML = name;
+			document.querySelector('#overlay .ProductId').value = id;
 		});
 	});
 
