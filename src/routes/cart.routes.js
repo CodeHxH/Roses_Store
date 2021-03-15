@@ -5,16 +5,15 @@ const {
 	addNewProduct,
 	renderShoppingCart,
 	deleteProduct,
-	createNewCart,
 } = require('../controllers/cart.controllers');
 
-const { isAuthenticated } = require('../helpers/auth');
+const { isRegistered } = require('../helpers/auth');
 
 // Add Product
-router.post('/cart/add', addNewProduct);
+router.post('/cart/add', isRegistered, addNewProduct);
 
 // Get all Products
-router.get('/cart', renderShoppingCart);
+router.get('/cart', isRegistered, renderShoppingCart);
 
 // Delete Product
 router.delete('/cart/delete/:id', deleteProduct);
