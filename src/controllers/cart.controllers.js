@@ -16,8 +16,14 @@ cartCtrl.addNewProduct = async (req, res) => {
 };
 
 cartCtrl.renderShoppingCart = async (req, res) => {
+	// Obteniendo los productos del usuario
 	let UserCart = await Cart.find({ user: req.user.id });
-	res.render('cart', { UserCart });
+	// Calculando subtotal
+	let subtotal = 0;
+	UserCart.forEach((element) => {
+		subtotal += element.product.price;
+	});
+	res.render('cart', { UserCart, subtotal });
 };
 
 cartCtrl.deleteProduct = async (req, res) => {

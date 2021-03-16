@@ -1,15 +1,41 @@
 .singin--bg {
 	width: 100%;
 	height: 100vh;
-	background: url('../img/bg-rose.png') no-repeat center center/cover;
+	background: radial-gradient($primary-color-hover, $crimson-color);
 	display: flex;
 	justify-content: center;
 	overflow-y: hidden;
 }
 
+.sing--nav {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: absolute;
+
+	i {
+		color: $secondary-color;
+		font-size: 1.5em;
+		margin: 0.5em;
+	}
+}
+
 .singin--container {
+	padding: 0 1.5em;
 	position: relative;
 	top: 150px;
+}
+
+.singin--footer {
+	margin-top: 1em;
+	color: $secondary-color;
+	text-align: center;
+	a {
+		text-decoration: underline;
+		color: $secondary-color;
+	}
 }
 
 .singin--card {
@@ -34,4 +60,8 @@
 .singin--header {
 	margin-bottom: 0.5em;
 	text-align: center;
+
+	img {
+		width: 200px;
+	}
 }

@@ -1,9 +1,11 @@
+{{>navigation}}
 <div class="cart__main--container">
 
     <div class="cart--container">
         <div class="cart--header">
             <h3>Tu lista de productos</h3>
         </div>
+        {{#if UserCart}}
         {{#each UserCart}}
             <div class="product__card--container">
                 <div class="product--card">
@@ -22,10 +24,13 @@
 
             </div>
         {{/each}}
+        {{else}}
+        <p>No hay ningun producto en el carrito</p>
+        {{/if}}
         <div class="line"></div>
         <div class="Subtotal--container">
             <p class="Subtotal">Subtotal</p>
-            <p class="Subtotal">100,00 $</p>
+            <p class="Subtotal">{{subtotal}} $</p>
         </div>
     </div>
     <div class="btn--right">
