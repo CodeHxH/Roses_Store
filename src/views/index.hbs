@@ -2,12 +2,12 @@
 {{>product_overlay}}
 
 {{!-- Header --}}
-<div class="header--container">
-    <div class="info--header">
+<div class="header">
+    <div class="header__info">
         <h1>Regala Eternidad</h1>
         <p>Louise's Roses va dirigido a personas que deseen expresar todo su amor a través de rosas. Son obsequios con calidad de exportación, nuestra meta es satisfacer las necesidades de los clientes ofreciendoles el mejor precio y excelentes productos de calidad.</p>
         <div>
-            <a href="#" class="btn">Compra tu rosa</a>
+            <a href="/" class="btn">Más productos</a>
         </div>
     </div>
 </div>
@@ -15,12 +15,12 @@
 {{!-- Catalogo de productos de la página de inicio--}}
 <h2 class="title">Catálogo de productos</h2>
 
-<div class="catalogo--container">
+<div class="catalogo">
     {{#each products}}
-        <div class="product--target" data-description="{{description}}" data-name="{{name}}" data-price="{{price}}" data-productid="{{_id}}">
+        <div class="product__card" data-description="{{description}}" data-name="{{name}}" data-price="{{price}}" data-productid="{{_id}}">
             
             <div>
-                <img src="{{img}}" alt="rosa" class="product--image">
+                <img src="{{img}}" alt="rosa" class="product__image">
 
                 <div class="btn">
                     <h3>{{name}}</h3>
@@ -31,75 +31,75 @@
     {{/each}}
 </div>
 
-<div class="more--icon">
+<div class="icon">
     <a href="#"><i class="bi bi-three-dots"></i></a>
 </div>
 
 {{!-- Background del footer --}}
 <div class="footer--bg">
 	{{!-- Formulario de contacto --}}
-    <div class="form__main--container" id="contacto">
-	<h4 class="title">Contactanos</h4>
+    <div class="contact" id="contact">
 
-	<div class="form--container">
-		<form action="/send-email" method="POST" class="form">
-			<div class="input__form--container">
-				<input
-					type="text"
-					name="name"
-					class="input--form"
-					placeholder="  Nombre"
-				/>
-				<input
-					type="text"
-					name="lastname"
-					class="input--form"
-					placeholder="  Apellido"
-				/>
-				<input
-					type="text"
-					name="email"
-					class="input--form"
-					placeholder="  Email"
-				/>
-				<input
-					type="text"
-					name="phone"
-					class="input--form"
-					placeholder="  Teléfono"
-				/>
+		<h4 class="title">Contactanos</h4>
 
-				<textarea
-					name="message"
-					rows="2"
-					class="input--form block"
-					placeholder="  Escriba su mensaje aquí"
-				></textarea>
+		<div class="contact__elements">
+			<form action="/send-email" method="POST" class="form">
+				<div class="form__inputs">
+					<input
+						type="text"
+						name="name"
+						class="input"
+						placeholder="  Nombre"
+					/>
+					<input
+						type="text"
+						name="lastname"
+						class="input"
+						placeholder="  Apellido"
+					/>
+					<input
+						type="text"
+						name="email"
+						class="input"
+						placeholder="  Email"
+					/>
+					<input
+						type="text"
+						name="phone"
+						class="input"
+						placeholder="  Teléfono"
+					/>
 
-				<button class="btn-inv block">Enviar</button>
+					<textarea
+						name="message"
+						rows="2"
+						class="input block"
+						placeholder="  Escriba su mensaje aquí"
+					></textarea>
+
+					<button class="btn-inv block">Enviar</button>
+				</div>
+			</form>
+
+			{{!-- Información de contacto adicional --}}
+			<div class="contact__info">
+				<h5>Más información</h5>
+
+				<ul>
+					<li><i class="bi bi-geo-alt-fill"></i><p><span>Ciudad Bolívar, Venezuela.</span></p></li>
+					<li><i class="bi bi-envelope-fill"></i><p>louisesrosesve@gmail.com</p></li>
+					<li><i class="bi bi-telephone-fill"></i><p>0412-8950564</p></li>
+				</ul>
+
+				<p class="paragraph center">
+					Queremos tener una buena comunicación para tener buenos resultados, no
+					dudes en contactarnos.
+				</p>
+
+				<p class="center">www.rosaseternas.com</p>
 			</div>
-		</form>
-
-		{{!-- Información de contacto adicional --}}
-		<div class="info__form--container">
-			<h5>Más información</h5>
-
-			<ul>
-				<li><i class="bi bi-geo-alt-fill"></i><p><span>Ciudad Bolívar, Venezuela.</span></p></li>
-				<li><i class="bi bi-envelope-fill"></i><p>louisesrosesve@gmail.com</p></li>
-				<li><i class="bi bi-telephone-fill"></i><p>0412-8950564</p></li>
-			</ul>
-
-			<p class="p--form center">
-				Queremos tener una buena comunicación para tener buenos resultados, no
-				dudes en contactarnos.
-			</p>
-
-			<p class="center">www.rosaseternas.com</p>
 		</div>
 	</div>
-
-</div>
 
 	{{!-- Footer --}}
     {{>footer}}

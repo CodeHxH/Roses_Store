@@ -1,0 +1,50 @@
+.alert {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+
+	.alert__item {
+		position: absolute;
+		background-color: $secondary-color;
+		padding: 1em;
+		border-radius: 5px;
+		z-index: 100000000;
+		min-width: 350px;
+		margin: 1em;
+		margin-bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		button {
+			i {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.alert__item--success {
+		p,
+		i {
+			color: rgb(32, 204, 70);
+		}
+	}
+
+	.alert__item--danger {
+		p,
+		i {
+			color: rgb(240, 60, 60);
+		}
+	}
+
+	// Alerts animation
+	.animate__animated {
+		--animate-duration: 1s;
+		--animate-delay: 0.9s;
+	}
+}
+
+// Add class close
+.alert__item.close {
+	display: none;
+}

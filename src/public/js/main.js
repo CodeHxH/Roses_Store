@@ -1,17 +1,27 @@
-// Listener del icono de menú
-const btn = document.querySelector('.nav--icon');
-const nav = document.querySelector('.nav--menu__container');
-const nav_menu = document.querySelector('.nav--icon');
+// Cerrando ventanas de alerta
+function closeAlert() {
+	const closeAlert = document.querySelector('.alert__item');
+	closeAlert.classList.toggle('close');
+}
 
-btn.addEventListener('click', () => {
-	nav.classList.toggle('open');
-	nav_menu.classList.toggle('open');
-});
+// Abrir/Cerrar el menú desplegable
+function toggleMenu(animation) {
+	const menu = document.querySelector('.menu');
+	if (animation == true) {
+		menu.classList.remove('animate__slideOutLeft');
+		menu.classList.add('animate__slideInLeft');
+		menu.classList.add('open');
+	} else {
+		menu.classList.remove('animate__slideInLeft');
+		menu.classList.add('animate__slideOutLeft');
+	}
+}
 
 // Insertando datos en el overlay
 const overlay = document.getElementById('overlay');
+
 document
-	.querySelectorAll('.catalogo--container .product--target img')
+	.querySelectorAll('.catalogo .product__card img')
 	.forEach((elemento) => {
 		elemento.addEventListener('click', () => {
 			const route = elemento.getAttribute('src');
@@ -22,15 +32,18 @@ document
 
 			overlay.classList.add('active');
 			document.querySelector('#overlay img').src = route;
-			document.querySelector('#overlay .description').innerHTML = description;
-			document.querySelector('#overlay .price').innerHTML = price + ' $';
-			document.querySelector('#overlay .name').innerHTML = name;
-			document.querySelector('#overlay .ProductId').value = id;
+			document.querySelector(
+				'#overlay .product__description'
+			).innerHTML = description;
+			document.querySelector('#overlay .product__price').innerHTML =
+				price + ' $';
+			document.querySelector('#overlay .product__name').innerHTML = name;
+			document.querySelector('#overlay .product__id').value = id;
 		});
 	});
 
 // Listener del boton para cerrar.
-document.querySelector('#btn--close').addEventListener('click', () => {
+document.querySelector('#btn-close').addEventListener('click', () => {
 	overlay.classList.remove('active');
 });
 

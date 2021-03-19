@@ -1,11 +1,11 @@
 {{!-- Navegación --}}
-<div class="nav--container">
+<div class="nav">
     <nav>
 
         {{#if user}}
             {{!-- Boton de menú --}}
-            <ul class="nav--icon">
-                <li><a id="nav--icon"><i class="bi bi-list"></i></a></li>
+            <ul>
+                <li><button onclick="toggleMenu(true)"><i class="bi bi-list"></i></button></li>
             </ul>
 
             {{!-- Icono del carrito --}}
@@ -14,8 +14,13 @@
             </ul>
         {{else}}
             {{!-- Boton de menú --}}
-            <ul class="nav--icon">
-                <li><a href="#" id="nav--icon"><i class="bi bi-list"></i></a></li>
+            <ul>
+                <li><button onclick="toggleMenu(true)"><i class="bi bi-list"></i></button></li>
+            </ul>
+            {{!-- Boton de inicio de sesión --}}
+            <ul class="nav__session">
+                <li><a href="/users/singin">Iniciar sesión</a></li>
+                <li><a href="/users/singup">Registro</a></li>
             </ul>
         {{/if}}
 

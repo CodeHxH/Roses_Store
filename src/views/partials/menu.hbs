@@ -1,53 +1,52 @@
-<div class="nav--menu__container">
+<div>
+	<div class="menu animate__animated">
 
-	{{!-- Botones del menú --}}
-	<div class="nav--menu__btn">
-		{{#if user}}
-		{{!-- Boton finalizar sesión --}}
-		<ul class="singup">
-			<li><a href="/users/logout" class="btn-out">Salir <i class="bi bi-box-arrow-right"></i></a></li>
-		</ul>
-		{{else}}
-		{{!-- Boton de inicio de sesión --}}
-		<ul class="singup">
-			<li><a href="/users/singin" class="btn-out">Iniciar sesión</a></li>
-			<li><a href="/users/singup" class="btn-out">Registro</a></li>
-		</ul>
-		{{/if}}
-	</div>
+		{{!-- Botones del menú --}}
+		<div class="menu__header">
+			<ul class="menu__icon">
+                <li><button onclick="toggleMenu(false)"><i class="bi bi-list"></i></button></li>
+            </ul>
+			{{#if user}}
+			{{!-- Boton finalizar sesión --}}
+			<ul class="nav__session">
+				<li><a href="/users/logout">Salir <i class="bi bi-box-arrow-right"></i></a></li>
+			</ul>
+			{{/if}}
+		</div>
 
-	{{!-- Links del menú --}}
-    <ul class="nav--menu">
-        <li><a href="/">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="/cart">Carrito</a></li>
-        <li><a href="#">Pago</a></li>
-        <li><a href="/about">Sobre nosotros</a></li>
-    </ul>
-
-	{{!-- Links de redes sociales --}}
-	<div class="redes--menu">
-		<ul>
-			<li>
-				<a href="https://instagram.com/" target="_blank">
-					<i class="redes--item bi bi-instagram"></i>
-				</a>
-			</li>
-            <li>
-				<a href="https://twitter.com/" target="_blank">
-					<i class="redes--item bi bi-twitter"></i>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.facebook.com/" target="_blank">
-					<i class="redes--item bi bi-facebook"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#" target="_blank">
-					<i class="redes--item bi bi-whatsapp"></i>
-				</a>
-			</li>
+		{{!-- Links del menú --}}
+		<ul class="menu__links">
+			<li><a href="/">Inicio</a></li>
+			<li><a href="#">Productos</a></li>
+			<li><a href="/cart">Carrito</a></li>
+			<li><a href="#">Pago</a></li>
+			<li><a href="/about">Sobre nosotros</a></li>
 		</ul>
+
+		{{!-- Links de redes sociales --}}
+		<div class="menu__footer">
+			<ul>
+				<li>
+					<a href="https://instagram.com/" target="_blank">
+						<i class="bi bi-instagram"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/" target="_blank">
+						<i class="bi bi-twitter"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/" target="_blank">
+						<i class="bi bi-facebook"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank">
+						<i class="bi bi-whatsapp"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>

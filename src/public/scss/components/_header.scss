@@ -1,6 +1,5 @@
-.header--container {
-	background: url('../../img/background_header.jpg') no-repeat center
-		center/cover;
+.header {
+	background: radial-gradient($primary-color-hover, rgb(68, 0, 0));
 	height: 600px;
 	display: flex;
 	align-items: flex-end;
@@ -10,11 +9,12 @@
 	}
 }
 
-.info--header {
+.header__info {
 	padding: 2em;
 
 	h1 {
 		font-size: 2em;
+		font-weight: 600;
 	}
 
 	* {

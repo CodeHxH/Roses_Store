@@ -2,10 +2,10 @@
 <div class="overlay" id="overlay">
 
     {{!-- Targeta del producto --}}
-    <div class="overlay--target">
+    <div class="product__card">
 
         {{!-- Boton de cerrado --}}
-        <div class="btn--close" id="btn--close">
+        <div class="btn--close" id="btn-close">
             <i class="bi bi-x"></i>
         </div>
 
@@ -16,19 +16,19 @@
         <div>
 
             {{!-- Nombre --}}
-            <h3 class="name"></h3>
+            <h3 class="product__name"></h3>
             {{!-- Descripción --}}
-            <p class="description"></p>
+            <p class="product__description"></p>
 
             {{!-- Footer del producto --}}
-            <div class="overlay--target__footer">
+            <div class="product__footer">
 
                 {{!-- Precio --}}
-                <p class="price"></p>
+                <p class="product__price"></p>
                 {{!-- Botón del carrito --}} 
                 <form action="/cart/add" method="POST">
-                    <input type="hidden" name="ProductId" class="ProductId" value="">
-                    <button class="btn" id="product_state">Agregar al carrito</button>
+                    <input type="hidden" name="product__id" class="product__id" value="">
+                    <button class="btn">Agregar al carrito</button>
                 </form>
 
             </div>

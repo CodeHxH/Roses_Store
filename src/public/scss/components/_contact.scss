@@ -1,4 +1,4 @@
-.form__main--container {
+.contact {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -9,32 +9,37 @@
 		color: $secondary-color;
 	}
 
-	h4 {
-		margin-bottom: 1em;
+	.title {
+		margin-bottom: 0.75em;
+		font-weight: 400;
 	}
 }
 
-.form--container {
-	background: radial-gradient($primary-color-hover, $crimson-color);
+.contact__elements {
+	background-color: $secondary-color;
 
-	.input__form--container {
+	.form__inputs {
 		display: flex;
 		flex-direction: column;
 		padding: 1em;
 
-		*::placeholder {
-			color: $secondary-color;
+		input:focus,
+		textarea:focus {
+			background: linear-gradient(transparent, rgb(235, 235, 235));
+			outline: none;
 		}
 
 		button {
-			color: $primary-color;
+			color: $secondary-color;
+			background-color: $primary-color;
 		}
 
 		input {
 			background: transparent;
 			padding: 5px;
 			border: none;
-			border-bottom: 2px solid $secondary-color;
+			color: $third-color;
+			border-bottom: 2px solid $primary-color;
 			margin: 0.5em;
 		}
 
@@ -44,18 +49,20 @@
 			padding: 5px;
 			border: none;
 			margin: 0.5em;
-			border-bottom: 2px solid $secondary-color;
+			color: $third-color;
+			border-bottom: 2px solid $primary-color-hover;
 			height: 100px;
 		}
 	}
 
-	.info__form--container {
+	.contact__info {
 		background-color: $third-color;
 		padding: 1em;
 
 		h5 {
 			text-align: center;
 			margin: 1em;
+			font-weight: 400;
 		}
 		li {
 			display: flex;
@@ -64,12 +71,6 @@
 		}
 		p {
 			margin: 0.5em;
-		}
-		.p--form {
-			margin: 1.5em 0.5em;
-		}
-		.center {
-			text-align: center;
 		}
 	}
 }

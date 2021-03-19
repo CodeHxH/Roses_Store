@@ -5,7 +5,7 @@ const Products = require('../models/Product');
 
 cartCtrl.addNewProduct = async (req, res) => {
 	// Buscar el producto
-	const product = await Products.findById(req.body.ProductId);
+	const product = await Products.findById(req.body.product__id);
 	// Creando un nuevo producto para el carrito
 	const NewProductCart = new Cart({
 		user: req.user.id,
@@ -17,7 +17,7 @@ cartCtrl.addNewProduct = async (req, res) => {
 
 cartCtrl.renderShoppingCart = async (req, res) => {
 	// Obteniendo los productos del usuario
-	let UserCart = await Cart.find({ user: req.user.id });
+	const UserCart = await Cart.find({ user: req.user.id });
 	// Calculando subtotal
 	let subtotal = 0;
 	UserCart.forEach((element) => {

@@ -1,24 +1,24 @@
-<div class="singin--bg">
-    <div class="sing--nav">
-        <a href="/"><i class="bi bi-house-door-fill"></i></a>
+<div class="session">
+    <div class="session__nav">
+        <a href="/"><i class="bi bi-list"></i></a>
     </div>
-    <div class="singin--container">
-        <div class="singin--card">
-            <div class="singin--header">
+    <div class="session__card">
+        <div class="card">
+            <div class="card__header">
                 <img src="/svg/logo--letras--una_tinta.svg" alt="">
             </div>
-            <div class="singin--body">
+            <div>
                 <form action="/users/singup" method="POST">
-                    <div class="form--input">
+                    <div>
                         <input type="text" class="form-control" name="name" placeholder="Name" value="{{name}}">
                     </div>
-                    <div class="form--input">
+                    <div>
                         <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}">
                     </div>
-                    <div class="form--input">
+                    <div>
                         <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
-                    <div class="form--input">
+                    <div>
                         <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
                     </div>
                     <button class="btn">
@@ -27,6 +27,6 @@
                 </form>
             </div>
         </div>
-    <p class="singin--footer">¿Ya tienes una cuenta? entonces <a href="/users/singin">inicia sesión</a></p>
+    <p class="session__footer">¿Ya tienes una cuenta? entonces <a href="/users/singin">inicia sesión</a></p>
     </div>
 </div>

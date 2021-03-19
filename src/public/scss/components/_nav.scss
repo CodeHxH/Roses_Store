@@ -1,38 +1,39 @@
 // Barra de navegación
 nav {
 	display: flex;
+	width: 100vw;
 	align-items: center;
 	justify-content: space-between;
 	background-color: $primary-color;
 	height: 50px;
+
+	i {
+		font-size: 1.5em;
+		margin: 0.5em;
+		color: $secondary-color;
+	}
 
 	a {
 		display: flex;
 		align-items: center;
 		color: $secondary-color;
 	}
+}
+// --revision--
+.nav__session {
+	display: flex;
 
-	i {
-		font-size: 1.5em;
-		margin: 0.5em;
+	* {
+		color: $secondary-color;
 	}
-
-	.nav--icon {
-		position: relative;
-		z-index: 100000;
-	}
-
-	.singup {
-		display: flex;
-
-		li {
-			margin-right: 0.5em;
-		}
+	li {
+		margin-right: 0.5em;
+		padding: 0.5em;
 	}
 }
 
 // Menu desplegable
-.nav--menu__container {
+.menu {
 	display: none;
 	position: fixed;
 	background-color: $overlay-bg;
@@ -45,59 +46,61 @@ nav {
 	* {
 		color: $secondary-color;
 	}
-}
 
-.nav--menu__btn {
-	display: flex;
-	justify-content: flex-end;
-
-	.singup {
+	.menu__header {
 		display: flex;
-		margin-top: 1em;
-		li {
-			margin-right: 0.5em;
-		}
-	}
-}
-
-.nav--menu {
-	li {
-		margin: 5em 0;
-		text-align: center;
-
-		a {
-			font-size: 1.25em;
-		}
-	}
-}
-
-.redes--menu {
-	display: flex;
-	justify-content: center;
-	margin: 1em;
-
-	ul {
-		display: flex;
-
-		li {
-			margin: 0.5rem;
-		}
+		height: 50px;
+		align-items: center;
+		justify-content: space-between;
 
 		i {
-			font-size: 1.7rem;
+			margin: 0.5em;
+		}
+
+		.nav__session {
+			justify-content: flex-end;
+		}
+
+		.menu__icon {
+			justify-content: flex-start;
+
+			i {
+				font-size: 1.5em;
+			}
+		}
+	}
+
+	.menu__links {
+		li {
+			margin: 5em 0;
+			text-align: center;
+
+			a {
+				font-size: 1.25em;
+			}
+		}
+	}
+
+	.menu__footer {
+		display: flex;
+		justify-content: center;
+		margin: 1em;
+
+		ul {
+			display: flex;
+
+			li {
+				margin: 0.5rem;
+			}
+
+			i {
+				font-size: 1.7rem;
+			}
 		}
 	}
 }
 
-.nav--menu__container.open {
+// Add class open
+.menu.open {
 	display: flex;
-}
-
-.nav--icon.open {
-	position: fixed;
-	left: 2px;
-	top: 2px;
-	i {
-		font-size: 1.5em;
-	}
 }

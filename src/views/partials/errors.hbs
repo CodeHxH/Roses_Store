@@ -1,13 +1,16 @@
-{{#if error}}
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        {{error}}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="alert">
+    {{#if error}}
+    <div class="alert__item alert__item--danger animate__animated animate__headShake">
+        <p><i class="bi bi-exclamation-circle-fill"></i> {{error}}</p>
+        <button onclick="closeAlert()"><i class="bi bi-x"></i></button>
     </div>
-{{/if}}
+    {{/if}}
 
-{{#each errors}}
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        {{text}}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-{{/each}}
+    {{#each errors}}
+        <div class="alert__item alert__item--danger  animate__animated animate__headShake">
+            <p><i class="bi bi-exclamation-circle-fill"></i> {{text}}</p>
+        <button onclick="closeAlert()"><i class="bi bi-x"></i></button>
+
+        </div>
+    {{/each}}
+</div>

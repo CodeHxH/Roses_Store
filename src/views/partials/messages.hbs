@@ -1,14 +1,15 @@
-{{#if success_msg}}
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{success_msg}}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="alert">
+    {{#if success_msg}}
+    <div class="alert__item alert__item--success  animate__animated animate__headShake">
+        <p><i class="bi bi-check-circle-fill"></i> {{success_msg}}</p>
+        <button onclick="closeAlert()"><i class="bi bi-x"></i></button>
     </div>
-{{/if}}
+    {{/if}}
 
-{{#if error_msg}}
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        {{error_msg}}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-{{/if}}
-
+    {{#if error_msg}}
+        <div class="alert__item alert__item--danger  animate__animated animate__headShake">
+        <p><i class="bi bi-exclamation-circle-fill"></i> {{error_msg}}</p>
+        <button onclick="closeAlert()"><i class="bi bi-x"></i></button>
+        </div>
+    {{/if}}
+</div>
