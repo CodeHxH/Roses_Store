@@ -4,7 +4,7 @@ helpers.isAuthenticated = (req, res, next) => {
 	if (req.isAuthenticated()) {
 		return next();
 	}
-	req.flash('error_msg', 'Not Authorized');
+	req.flash('error_msg', 'No estás autorizado');
 	res.redirect('/users/singin');
 };
 
@@ -14,7 +14,7 @@ helpers.isRegistered = (req, res, next) => {
 	if (user) {
 		return next();
 	}
-	req.flash('error_msg', 'You are not registered');
+	req.flash('error_msg', 'Aún no estás registrado');
 	res.redirect('/users/singin');
 };
 

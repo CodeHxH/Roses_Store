@@ -1,0 +1,63 @@
+{{>navigation}}
+
+<h3 class="title">Solicitud de compra</h3>
+
+<div class="order">
+    <form action="/send/order" method="POST">
+        <div class="order__form">
+            <p class="center">Rellene el formulario</p>
+            <input type="text" name="name" placeholder="Nombre">
+            <input type="text" name="lastname" placeholder="Apellido">
+            <input type="text" name="phone" placeholder="Teléfono">
+            <input type="text" name="email" placeholder="Correo">
+            <input type="text" name="city" placeholder="Ciudad">
+            <input type="text" name="state" placeholder="Estado">
+        </div>
+
+        <div class="order__form--delivery">
+            <p class="center">¿Necesita delivery?</p>
+            <div class="form__radio">
+                <input type="radio" name="delivery" id="radio1" value="Si" class="order__form--none">
+                <input type="radio" name="delivery" id="radio2" value="No" class="order__form--none">
+
+                <label for="radio1" class="order__form--radio1"></label>
+                <p>Si</p>
+                <label for="radio2" class="order__form--radio2"></label>
+                <p>No</p>
+            </div>
+            <div class="order__note">
+                <p>nota.</p>
+                <ul>
+                    <li>1 - El servicio de delivery incluye un costo adicional.</li>
+                    <li>2 - Ciudad Bolívar cuenta con delivery gratuito.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="order__form--delivery">
+            <p class="center">Selecciona un método de pago</p>
+            <div class="form__radio">
+                <input type="radio" name="method" id="divisas" value="Divisas" class="order__form--none">
+                <input type="radio" name="method" id="transferencia" value="Transferencia bancaria" class="order__form--none">
+                <input type="radio" name="method" id="movil" value="Pago movil" class="order__form--none">
+                <input type="radio" name="method" id="western" value="Western Union" class="order__form--none">
+
+                <label for="divisas" class="order__form--divisas"></label>
+                <p>Divisas</p>
+                <label for="transferencia" class="order__form--transferencia"></label>
+                <p>Transferencia bancaria</p>                
+                <label for="movil" class="order__form--movil"></label>
+                <p>Pago movil</p>
+                <label for="western" class="order__form--western"></label>
+                <p>Western Union</p>
+            </div>
+        </div>
+
+        <div class="btn-right"><button class="btn" type="submit">Enviar</button></div>
+
+    </form>
+</div>
+
+<div class="footer--bg">
+    {{>footer}}
+</div>

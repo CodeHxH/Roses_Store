@@ -4,6 +4,7 @@ const router = Router();
 const {
 	renderIndex,
 	renderAbout,
+	sendMessage,
 } = require('../controllers/index.controllers');
 
 // Render index
@@ -12,8 +13,9 @@ router.get('/', renderIndex);
 // Render about
 router.get('/about', renderAbout);
 
-router.get('/products');
+// Send a message
+router.post('/send/message', sendMessage);
 
-router.get('/message');
+router.get('/products');
 
 module.exports = router;

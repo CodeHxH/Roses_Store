@@ -16,6 +16,6 @@ router.post('/cart/add', isRegistered, addNewProduct);
 router.get('/cart', isRegistered, renderShoppingCart);
 
 // Delete Product
-router.delete('/cart/delete/:id', deleteProduct);
+router.delete('/cart/delete/:id', isRegistered, deleteProduct);
 
 module.exports = router;

@@ -20,6 +20,14 @@ li {
 	list-style: none;
 }
 
+// Formularios
+input:focus,
+button:focus,
+textarea:focus {
+	border: none;
+	outline: none;
+}
+
 // Parrafos y texto
 .title {
 	text-align: center;
