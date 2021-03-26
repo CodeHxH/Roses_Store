@@ -1,16 +1,16 @@
 .contact {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	padding: 1em;
+	padding-top: 0;
+	max-width: $max-width;
+	margin: auto;
 
 	* {
 		color: $secondary-color;
 	}
 
 	.title {
-		margin-bottom: 0.75em;
 		font-weight: 400;
 	}
 }
@@ -22,14 +22,10 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1em;
-
-		input:focus,
-		textarea:focus {
-			background: linear-gradient(transparent, rgb(235, 235, 235));
-			outline: none;
-		}
+		padding-bottom: 0;
 
 		button {
+			margin: 1em 0;
 			color: $secondary-color;
 			background-color: $primary-color;
 		}
@@ -39,7 +35,7 @@
 			padding: 5px;
 			border: none;
 			color: $third-color;
-			border-bottom: 2px solid $primary-color;
+			border-bottom: 2px solid rgb(230, 230, 230);
 			margin: 0.5em;
 		}
 
@@ -49,9 +45,16 @@
 			padding: 5px;
 			border: none;
 			margin: 0.5em;
+			margin-bottom: 0;
 			color: $third-color;
-			border-bottom: 2px solid $primary-color-hover;
-			height: 100px;
+			border-bottom: 2px solid rgb(230, 230, 230);
+			height: 150px;
+		}
+
+		button:focus,
+		input:focus,
+		textarea:focus {
+			border-bottom: 2px solid $primary-color;
 		}
 	}
 

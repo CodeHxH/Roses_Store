@@ -37,12 +37,11 @@
 				padding: 0.5em;
 				margin: 1em 0;
 				width: 100%;
-				border-bottom: 2px solid $primary-color;
+				border-bottom: 2px solid rgb(230, 230, 230);
 			}
 
 			input:focus {
-				background: linear-gradient(transparent, rgb(235, 235, 235));
-				outline: none;
+				border-bottom: 2px solid $primary-color;
 			}
 
 			button {

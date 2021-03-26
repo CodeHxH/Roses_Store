@@ -2,6 +2,7 @@
 	background: radial-gradient($primary-color-hover, rgb(68, 0, 0));
 	height: 600px;
 	display: flex;
+	justify-content: center;
 	align-items: flex-end;
 
 	* {
@@ -11,6 +12,7 @@
 
 .header__info {
 	padding: 2em;
+	max-width: $max-width;
 
 	h1 {
 		font-size: 2em;

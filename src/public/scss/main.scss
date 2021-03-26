@@ -7,6 +7,8 @@ $third-color: #000;
 $gray-color: #1c1c1c;
 $crimson-color: #6d000d;
 $overlay-bg: rgba(0, 0, 0, 0.98);
+$max-width: 700px;
+$min-width: 350px;
 
 // Importando componentes
 @import './components/global';
@@ -20,3 +22,7 @@ $overlay-bg: rgba(0, 0, 0, 0.98);
 @import './components/cart';
 @import './components/alerts';
 @import './components/order';
+@import './components/message';
+// Componentes responsive
+@import './components/responsive.components/_tablet';
+@import './components/responsive.components/pc';
