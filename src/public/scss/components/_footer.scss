@@ -6,6 +6,7 @@
 	display: flex;
 	flex-direction: column;
 	padding: 1em;
+	align-items: center;
 
 	* {
 		color: $secondary-color;
@@ -19,6 +20,17 @@
 		a {
 			text-align: center;
 			margin: 1em 0;
+		}
+	}
+
+	.footer__img {
+		margin: auto;
+		padding: 2em;
+		max-width: 500px;
+		margin: 2em 0;
+
+		img {
+			width: 100%;
 		}
 	}
 
@@ -42,7 +54,8 @@
 .copyright {
 	background-color: $third-color;
 	color: $secondary-color;
-	padding: 1em;
+	height: 70px;
+	padding: 1.5em;
 
 	footer {
 		text-align: center;
