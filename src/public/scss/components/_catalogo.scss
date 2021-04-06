@@ -28,6 +28,8 @@
 		z-index: 1000;
 		top: 0;
 		color: $secondary-color;
+		display: none;
+		flex-direction: column;
 		opacity: 0;
 		padding: 1em;
 
