@@ -1,23 +1,18 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
 	.catalogo {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		margin: auto;
 		max-width: 1000px;
 
 		.product__card {
 			img {
-				width: 200px;
-				height: 200px;
+				width: 300px;
 			}
 		}
 	}
 
 	.overlay {
 		.product__card {
-			img {
-				height: 468px;
-			}
-
 			.product__name {
 				font-size: 2em;
 			}

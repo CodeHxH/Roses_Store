@@ -1,13 +1,12 @@
 @media screen and (min-width: 1600px) {
 	.catalogo {
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		margin: auto;
 		max-width: 1500px;
 
 		.product__card {
 			img {
-				width: 280px;
-				height: 280px;
+				width: 400px;
 			}
 		}
 	}
@@ -35,11 +34,11 @@
 
 		.product__card {
 			display: grid;
-			grid-template-columns: 468px 1fr;
-			max-width: 1000px;
+			grid-template-columns: 800px 400px;
+			max-width: 1200px;
 
 			img {
-				height: 468px;
+				border-radius: 5px 0 0 5px;
 			}
 		}
 	}

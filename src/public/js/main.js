@@ -37,7 +37,8 @@ document
 			).innerHTML = description;
 			document.querySelector('#overlay .product__price').innerHTML =
 				price + ' $';
-			document.querySelector('#overlay .product__name').innerHTML = name;
+			document.querySelector('#overlay .product__name').innerHTML =
+				'COD. ' + name;
 			document.querySelector('#overlay .product__id').value = id;
 		});
 	});

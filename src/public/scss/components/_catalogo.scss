@@ -4,8 +4,7 @@
 	margin: auto;
 	max-width: 500px;
 	padding: 1em;
-	gap: 0.5em;
-	row-gap: 3em;
+	gap: 1em;
 }
 
 .product__card {
@@ -16,15 +15,8 @@
 	img {
 		object-fit: cover;
 		width: 160px;
-		height: 160px;
-	}
-
-	.btn {
-		border-radius: 0;
-		h3 {
-			text-align: center;
-			color: $secondary-color;
-		}
+		border-radius: 5px;
+		cursor: pointer;
 	}
 }
 
