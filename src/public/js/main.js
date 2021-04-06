@@ -21,7 +21,7 @@ function toggleMenu(animation) {
 const overlay = document.getElementById('overlay');
 
 document
-	.querySelectorAll('.catalogo .product__card img')
+	.querySelectorAll('.catalogo .product__card .product__hover')
 	.forEach((elemento) => {
 		elemento.addEventListener('click', () => {
 			const route = elemento.getAttribute('src');
