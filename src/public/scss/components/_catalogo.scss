@@ -1,6 +1,6 @@
 .catalogo {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr;
 	margin: auto;
 	max-width: 500px;
 	padding: 1em;
@@ -11,12 +11,39 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 
 	img {
 		object-fit: cover;
-		width: 160px;
+		width: 300px;
 		border-radius: 5px;
 		cursor: pointer;
+		box-shadow: 0 0 5px #000;
+	}
+
+	.product__hover {
+		cursor: pointer;
+		position: absolute;
+		width: 80%;
+		z-index: 1000;
+		top: 0;
+		color: $secondary-color;
+		opacity: 0;
+		padding: 1em;
+
+		.product__hover--name {
+			font-weight: 400;
+			font-size: 1.7em;
+		}
+
+		.product__hover--description {
+			margin: 1em 0;
+		}
+
+		.product__hover--price {
+			font-size: 1.7em;
+			font-weight: 400;
+		}
 	}
 }
 

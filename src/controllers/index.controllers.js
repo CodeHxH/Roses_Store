@@ -4,9 +4,14 @@ const Products = require('../models/Product');
 const nodemailer = require('nodemailer');
 
 indexCtrl.renderIndex = async (req, res) => {
-	const products = await Products.find().sort({
+	const list = await Products.find().sort({
 		createdAt: 'desc',
 	});
+
+	let products = [];
+	for (let i = 0; i <= 8; i++) {
+		products[i] = list[i];
+	}
 	res.render('index', { products });
 };
 

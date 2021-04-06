@@ -54,8 +54,10 @@
 .copyright {
 	background-color: $third-color;
 	color: $secondary-color;
-	height: 70px;
-	padding: 1.5em;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	footer {
 		text-align: center;
