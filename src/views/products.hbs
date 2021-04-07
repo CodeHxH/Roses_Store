@@ -1,1 +1,46 @@
+{{!-- Navegación --}}
+{{>navigation}}
 
+<!-- Overlay -->
+{{>product_overlay}}
+
+<!-- Barra de busqueda -->
+<header>
+	<form action="">
+		<input
+			type="text"
+			class="barra-busqueda"
+			id="barra-busqueda"
+			placeholder="Buscar"
+		/>
+	</form>
+	<div class="categorias" id="categorias">
+		<a href="#" class="activo">Todos</a>
+		<a href="#">Cajas</a>
+		<a href="#">Esferas</a>
+		<a href="#">Cúpula pequeña</a>
+		<a href="#">Cúpula grande</a>
+	</div>
+</header>
+
+<!-- Imagenes -->
+<div class="catalogo grid" id="grid">
+    {{#each products}}
+        <div class="product__card item" data-etiquetas="{{label}}" data-description="{{description}}" data-name="{{name}}" data-price="{{price}}" data-productid="{{_id}}">
+            
+            <div class="item-contenido">
+                <img loading="lazy" src="{{img}}" alt="rosa" class="product__image">
+				<div class="product__hover" src="{{img}}">
+					<h4 class="product__hover--name">COD. {{name}}</h4>
+					<p class="product__hover--description">{{description}}</p>
+					<p class="product__hover--price">{{price}}.00 $</p>
+				</div>
+            </div>
+
+        </div>
+    {{/each}}
+</div>
+
+<div class="footer--bg">
+	{{>footer}}
+</div>

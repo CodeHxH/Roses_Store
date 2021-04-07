@@ -4,6 +4,12 @@ function closeAlert() {
 	closeAlert.classList.toggle('close');
 }
 
+function closePushAlert() {
+	const pushAlert = document.querySelector('.alert .push');
+	pushAlert.classList.toggle('close');
+}
+setTimeout(closePushAlert, 6000);
+
 // Abrir/Cerrar el menú desplegable
 function toggleMenu(animation) {
 	const menu = document.querySelector('.menu');
@@ -17,7 +23,7 @@ function toggleMenu(animation) {
 	}
 }
 
-// Insertando datos en el overlay
+// Insertando datos en el overlay para pc
 const overlay = document.getElementById('overlay');
 
 document
@@ -36,7 +42,7 @@ document
 				'#overlay .product__description'
 			).innerHTML = description;
 			document.querySelector('#overlay .product__price').innerHTML =
-				price + ' $';
+				price + '.00 $';
 			document.querySelector('#overlay .product__name').innerHTML =
 				'COD. ' + name;
 			document.querySelector('#overlay .product__id').value = id;
@@ -59,7 +65,7 @@ document
 				'#overlay .product__description'
 			).innerHTML = description;
 			document.querySelector('#overlay .product__price').innerHTML =
-				price + ' $';
+				price + '.00 $';
 			document.querySelector('#overlay .product__name').innerHTML =
 				'COD. ' + name;
 			document.querySelector('#overlay .product__id').value = id;

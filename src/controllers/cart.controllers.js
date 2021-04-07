@@ -12,6 +12,7 @@ cartCtrl.addNewProduct = async (req, res) => {
 		product: product,
 	});
 	await NewProductCart.save();
+	req.flash('push_msg', 'Producto añadido al carrito');
 	res.redirect('/');
 };
 

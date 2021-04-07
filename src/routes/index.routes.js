@@ -5,6 +5,7 @@ const {
 	renderIndex,
 	renderAbout,
 	sendMessage,
+	renderProducts,
 } = require('../controllers/index.controllers');
 
 // Render index
@@ -16,6 +17,7 @@ router.get('/about', renderAbout);
 // Send a message
 router.post('/send/message', sendMessage);
 
-router.get('/products');
+// Render all products
+router.get('/products', renderProducts);
 
 module.exports = router;

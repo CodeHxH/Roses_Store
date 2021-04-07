@@ -19,6 +19,12 @@ indexCtrl.renderAbout = (req, res) => {
 	res.render('about');
 };
 
+indexCtrl.renderProducts = async (req, res) => {
+	const products = await Products.find();
+
+	res.render('products', { products });
+};
+
 indexCtrl.sendMessage = async (req, res) => {
 	const { name, lastname, phone, email, message } = req.body;
 
