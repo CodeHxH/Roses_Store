@@ -42,7 +42,7 @@ document
 				'#overlay .product__description'
 			).innerHTML = description;
 			document.querySelector('#overlay .product__price').innerHTML =
-				price + '.00 $';
+				price + ' $';
 			document.querySelector('#overlay .product__name').innerHTML =
 				'COD. ' + name;
 			document.querySelector('#overlay .product__id').value = id;
@@ -65,7 +65,7 @@ document
 				'#overlay .product__description'
 			).innerHTML = description;
 			document.querySelector('#overlay .product__price').innerHTML =
-				price + '.00 $';
+				price + ' $';
 			document.querySelector('#overlay .product__name').innerHTML =
 				'COD. ' + name;
 			document.querySelector('#overlay .product__id').value = id;
