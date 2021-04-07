@@ -9,7 +9,7 @@ const {
 const { isRegistered, thereIsProducts } = require('../helpers/auth');
 
 // Render purchase request
-router.get('/order', thereIsProducts, isRegistered, renderOrderForm);
+router.get('/order', isRegistered, thereIsProducts, renderOrderForm);
 
 // Send purchase request
 router.post('/send/order', isRegistered, addNewOrder);

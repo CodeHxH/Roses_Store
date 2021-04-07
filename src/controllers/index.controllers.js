@@ -15,10 +15,6 @@ indexCtrl.renderIndex = async (req, res) => {
 	res.render('index', { products });
 };
 
-indexCtrl.renderAbout = (req, res) => {
-	res.render('about');
-};
-
 indexCtrl.renderProducts = async (req, res) => {
 	const products = await Products.find();
 

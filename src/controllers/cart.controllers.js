@@ -13,7 +13,7 @@ cartCtrl.addNewProduct = async (req, res) => {
 	});
 	await NewProductCart.save();
 	req.flash('push_msg', 'Producto añadido al carrito');
-	res.redirect('/');
+	res.redirect('/products');
 };
 
 cartCtrl.renderShoppingCart = async (req, res) => {
