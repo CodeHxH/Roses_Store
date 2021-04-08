@@ -32,7 +32,7 @@ orderCtrl.addNewOrder = async (req, res) => {
 	let orderForSend = ``;
 	newOrder.order.products.forEach((element) => {
 		let productName = element.product.name;
-		orderForSend += `<li>${productName}</li>`;
+		orderForSend += `<li><b>COD</b>. ${productName}</li>`;
 	});
 
 	// Calculando subtotal

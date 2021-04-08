@@ -11,8 +11,13 @@
 					<div class="cart__item">
 						<div class="item__card">
 							<div class="item">
-								<h2>{{product.name}}</h2>
-								<p>{{product.price}} $</p>
+								
+								<img src="{{product.img}}" alt="">
+
+								<div>
+									<h2>COD. {{product.name}}</h2>
+									<p>{{product.price}}.00 $</p>
+								</div>
 							</div>
 						</div>
 
@@ -32,7 +37,7 @@
 
 			<div class="cart__subtotal">
 				<p>Subtotal</p>
-				<p>{{subtotal}} $</p>
+				<p>{{subtotal}}.00 $</p>
 			</div>
 		</div>
 		<div class="cart__btn">
