@@ -57,6 +57,8 @@ indexCtrl.sendMessage = async (req, res) => {
 		html: contentHTML,
 	});
 
+	req.flash('success_msg', 'Mensage enviado con éxito');
+
 	res.redirect('/');
 };
 

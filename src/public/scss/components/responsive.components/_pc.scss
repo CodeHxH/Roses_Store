@@ -26,6 +26,24 @@
 		}
 	}
 
+	.icon {
+		width: 88%;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	section {
+		width: 900px;
+		margin: auto;
+
+		.pay__steps {
+			text-align: center;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 2em;
+		}
+	}
+
 	.overlay {
 		.product__info {
 			display: flex;

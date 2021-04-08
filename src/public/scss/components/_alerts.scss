@@ -4,6 +4,7 @@
 	flex-direction: row;
 
 	.alert__item {
+		box-shadow: 0 0 5px #000;
 		width: 90%;
 		max-width: $max-width;
 		position: absolute;

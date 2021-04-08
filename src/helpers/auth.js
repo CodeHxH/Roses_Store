@@ -27,7 +27,7 @@ helpers.thereIsProducts = async (req, res, next) => {
 		return next();
 	}
 	req.flash('error_msg', 'Aún no hay productos en tu carrito');
-	res.redirect('/');
+	res.redirect('/cart');
 };
 
 module.exports = helpers;

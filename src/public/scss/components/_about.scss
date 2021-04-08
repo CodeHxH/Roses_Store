@@ -1,0 +1,44 @@
+section {
+	.text,
+	.center {
+		padding: 0 2em 2em 2em;
+
+		p {
+			margin-bottom: 2em;
+			text-align: center;
+		}
+	}
+
+	a {
+		color: $third-color;
+	}
+
+	span {
+		font-weight: 600;
+	}
+
+	.pay__steps {
+		i {
+			font-size: 100px;
+			margin: 25px;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	ul {
+		margin-top: 1em;
+
+		li {
+			margin: 0.5em 0 0.5em 0.5em;
+
+			i {
+				margin-right: 0.5em;
+			}
+		}
+	}
+}
