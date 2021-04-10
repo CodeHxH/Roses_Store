@@ -51,17 +51,18 @@
 			padding: 1em;
 			justify-content: space-between;
 			height: 100%;
+		}
+
+		.product__description {
+			height: 100%;
+		}
+
+		.product__footer {
+			margin-top: 0;
 
 			.product__price {
-				margin-left: 1.5rem;
-			}
-
-			.product__description {
-				height: 100%;
-			}
-
-			.product__footer {
-				margin-top: 0;
+				margin-right: 1rem;
+				font-size: 2.25em;
 			}
 		}
 
