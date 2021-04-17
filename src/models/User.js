@@ -13,11 +13,13 @@ const UserSchema = new Schema(
 );
 
 UserSchema.methods.encryptPassword = async (password) => {
+	// Encriptando contraseña
 	const salt = await bcrypt.genSalt(10);
 	return await bcrypt.hash(password, salt);
 };
 
 UserSchema.methods.matchPassword = async function (password) {
+	// desencriptando contraseña
 	return await bcrypt.compare(password, this.password);
 };
 

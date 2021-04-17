@@ -5,10 +5,12 @@ const passport = require('passport');
 const User = require('../models/User');
 
 usersCtrl.renderSingUpForm = (req, res) => {
+	// Renderizando formulario de registro
 	res.render('users/singup');
 };
 
 usersCtrl.singup = async (req, res) => {
+	// Verificando datos del registro
 	const errors = [];
 	const { name, email, password, confirm_password } = req.body;
 	if (password != confirm_password) {
@@ -39,6 +41,7 @@ usersCtrl.singup = async (req, res) => {
 };
 
 usersCtrl.renderSingInForm = (req, res) => {
+	// Renderizando inicio de sesión
 	res.render('users/singin');
 };
 

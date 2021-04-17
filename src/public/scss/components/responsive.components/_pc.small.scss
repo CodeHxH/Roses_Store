@@ -1,10 +1,4 @@
-@media screen and (min-width: 1280px) {
-	.header {
-		img {
-			width: 450px;
-		}
-	}
-
+@media screen and (min-width: 1000px) {
 	.catalogo {
 		grid-template-columns: repeat(3, 1fr);
 		margin: auto;
@@ -12,7 +6,21 @@
 
 		.product__card {
 			img {
-				width: 400px;
+				width: 300px;
+			}
+
+			.product__hover {
+				width: 90%;
+
+				.product__hover--name {
+					font-size: 1em;
+				}
+				.product__hover--description {
+					font-size: 0.75em;
+				}
+				.product__hover--price {
+					font-size: 1em;
+				}
 			}
 		}
 
@@ -33,7 +41,7 @@
 	}
 
 	.icon {
-		width: 88%;
+		width: 100%;
 		display: flex;
 		justify-content: flex-end;
 	}
@@ -51,31 +59,37 @@
 	}
 
 	.overlay {
-		.product__info {
-			display: flex;
-			flex-direction: column;
-			padding: 1em;
-			justify-content: space-between;
-			height: 100%;
-		}
-
-		.product__description {
-			height: 100%;
-		}
-
-		.product__footer {
-			margin-top: 0;
-
-			.product__price {
-				margin-right: 1rem;
-				font-size: 2.25em;
-			}
-		}
-
 		.product__card {
 			display: grid;
-			grid-template-columns: 800px 400px;
+			grid-template-columns: 550px 250px;
 			max-width: 1200px;
+
+			.product__info {
+				display: flex;
+				flex-direction: column;
+				padding: 1em;
+				justify-content: space-between;
+				height: 100%;
+				font-size: 0.75em;
+
+				.product__description {
+					font-size: 1.4em;
+					height: 100%;
+				}
+
+				.product__price {
+					margin-right: 1em;
+					font-size: 27px;
+				}
+
+				.product__footer {
+					margin-top: 0;
+
+					button {
+						font-size: 0.9em;
+					}
+				}
+			}
 
 			img {
 				border-radius: 5px 0 0 5px;
@@ -84,7 +98,7 @@
 	}
 
 	.menu {
-		width: 25%;
+		width: 30%;
 	}
 
 	.nav {
@@ -110,7 +124,7 @@
 
 		.contact__elements {
 			display: grid;
-			grid-template-columns: 660px 400px;
+			grid-template-columns: 550px 350px;
 		}
 	}
 }

@@ -49,6 +49,7 @@ document
 		});
 	});
 
+// Insertando datos en el overlay para dispositivos moviles
 document
 	.querySelectorAll('.catalogo .product__card img')
 	.forEach((elemento) => {

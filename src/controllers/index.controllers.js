@@ -4,6 +4,7 @@ const Products = require('../models/Product');
 const nodemailer = require('nodemailer');
 
 indexCtrl.renderIndex = async (req, res) => {
+	// Pasando 9 productos a la página de inicio
 	const list = await Products.find().sort({
 		createdAt: 'desc',
 	});
@@ -12,16 +13,19 @@ indexCtrl.renderIndex = async (req, res) => {
 	for (let i = 0; i <= 8; i++) {
 		products[i] = list[i];
 	}
+
 	res.render('index', { products });
 };
 
 indexCtrl.renderProducts = async (req, res) => {
+	// Obteniendo los productos y renderizando la página de productos
 	const products = await Products.find();
 
 	res.render('products', { products });
 };
 
 indexCtrl.sendMessage = async (req, res) => {
+	// Enviando mensajes del usuario
 	const { name, lastname, phone, email, message } = req.body;
 
 	contentHTML = `

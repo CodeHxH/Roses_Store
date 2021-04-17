@@ -23,7 +23,7 @@
             <div>
                 <img loading="lazy" src="{{img}}" alt="rosa" class="product__image">
 				<div class="product__hover" src="{{img}}">
-					<h4 class="product__hover--name">COD. {{name}}</h4>
+					<p class="product__hover--name">COD. {{name}}</p>
 					<p class="product__hover--description">{{description}}</p>
 					<p class="product__hover--price">{{price}}.00 $</p>
 				</div>
@@ -86,42 +86,68 @@
 		<h4 class="title">Contactanos</h4>
 
 		<div class="contact__elements">
-			<form action="/send/message" method="POST" class="form">
-				<div class="form__inputs">
-					<input
-						type="text"
-						name="name"
-						class="input"
-						placeholder="  Nombre"
-					/>
-					<input
-						type="text"
-						name="lastname"
-						class="input"
-						placeholder="  Apellido"
-					/>
-					<input
-						type="text"
-						name="email"
-						class="input"
-						placeholder="  Email"
-					/>
-					<input
-						type="text"
-						name="phone"
-						class="input"
-						placeholder="  Teléfono"
-					/>
+			<form action="/send/message" method="POST" class="form" id="form">
+					<div class="form__group" id="group__name">
+						<div class="form__group--input">
+							<input
+								type="text"
+								name="name"
+								class="input"
+								placeholder="Nombre"
+							/>
+							<i class="bi"></i>
+						</div>
+						<p class="form__error"></p>
+					</div>
+					<div class="form__group" id="group__lastname">
+						<div class="form__group--input">
+							<input
+								type="text"
+								name="lastname"
+								class="input"
+								placeholder="Apellido"
+							/>
+							<i class="bi"></i>
+						</div>
+						<p class="form__error"></p>
+					</div>
+					<div class="form__group" id="group__email">
+						<div class="form__group--input">
+							<input
+								type="text"
+								name="email"
+								class="input"
+								placeholder="Email"
+							/>
+							<i class="bi"></i>
+						</div>
+						<p class="form__error"></p>
+					</div>
+					<div class="form__group" id="group__phone">
+						<div class="form__group--input">
+							<input
+								type="text"
+								name="phone"
+								class="input"
+								placeholder="Teléfono"
+							/>
+							<i class="bi"></i>
+						</div>
+						<p class="form__error"></p>
+					</div>
 
-					<textarea
-						name="message"
-						rows="2"
-						class="input block"
-						placeholder="  Escriba su mensaje aquí"
-					></textarea>
+					<div class="form__group">
+						<div class="form__group--textarea">
+							<textarea
+								name="message"
+								rows="2"
+								class="input block"
+								placeholder="Escriba su mensaje aquí"
+							></textarea>
+						</div>
+					</div>
 
-					<button class="btn-inv block">Enviar</button>
-				</div>
+					<button class="btn block">Enviar</button>
 			</form>
 
 			{{!-- Información de contacto adicional --}}

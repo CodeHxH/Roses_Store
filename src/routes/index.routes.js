@@ -7,11 +7,13 @@ const {
 	renderProducts,
 } = require('../controllers/index.controllers');
 
+const { formIsAuthenticated } = require('../helpers/auth');
+
 // Render index
 router.get('/', renderIndex);
 
 // Send a message
-router.post('/send/message', sendMessage);
+router.post('/send/message', formIsAuthenticated, sendMessage);
 
 // Render all products
 router.get('/products', renderProducts);

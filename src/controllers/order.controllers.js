@@ -6,6 +6,7 @@ const Order = require('../models/Order');
 const Cart = require('../models/Cart');
 
 orderCtrl.renderOrderForm = async (req, res) => {
+	// Renderizando formulario de petición de compra
 	res.render('order');
 };
 
@@ -42,6 +43,7 @@ orderCtrl.addNewOrder = async (req, res) => {
 		subtotal += element.product.price;
 	});
 
+	// Destructuring del cuerpo de la petición
 	const {
 		name,
 		lastname,

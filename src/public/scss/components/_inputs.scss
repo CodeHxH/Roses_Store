@@ -1,0 +1,61 @@
+.form {
+	padding: 1em;
+
+	.form__group {
+		margin-bottom: 0.5em;
+		padding: 0.5em;
+		border-bottom: 2px solid rgb(196, 196, 196);
+
+		.form__group--input {
+			display: grid;
+			grid-template-columns: 1fr 18px;
+
+			input {
+				border: none;
+				width: 100%;
+				color: #000;
+			}
+
+			i {
+				padding-left: 0.5em;
+			}
+		}
+
+		.form__group--textarea {
+			display: grid;
+			grid-template-columns: 1fr;
+
+			textarea {
+				resize: vertical;
+				background: transparent;
+				border: none;
+				color: $third-color;
+				height: 150px;
+			}
+		}
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
+
+.form {
+	.form__group.input__success {
+		border-bottom: 2px solid $success;
+
+		i {
+			color: $success;
+		}
+	}
+}
+
+.form {
+	.form__group.input__error {
+		border-bottom: 2px solid rgb(230, 35, 35);
+
+		i {
+			color: rgb(230, 35, 35);
+		}
+	}
+}
