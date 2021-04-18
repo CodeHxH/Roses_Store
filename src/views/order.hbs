@@ -1,17 +1,83 @@
 {{>navigation}}
 
-<h3 class="title">Solicitud de compra</h3>
+<h3 class="order__title">Solicitud de compra</h3>
 
 <div class="order">
-    <form action="/send/order" method="POST">
+    <form action="/send/order" method="POST" class="form">
         <div class="order__form">
             <p class="center">Rellene el formulario</p>
-            <input type="text" name="name" placeholder="Nombre">
-            <input type="text" name="lastname" placeholder="Apellido">
-            <input type="text" name="phone" placeholder="Teléfono">
-            <input type="text" name="email" placeholder="Correo">
-            <input type="text" name="city" placeholder="Ciudad">
-            <input type="text" name="state" placeholder="Estado">
+			<div class="form__group" id="group__clientName">
+				<div class="form__group--input">
+					<input
+						type="text"
+						name="clientName"
+						class="input"
+						placeholder="Nombre"
+					/>
+					<i class="bi"></i>
+				</div>
+				<p class="form__error">El nombre tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
+			</div>
+			<div class="form__group" id="group__clientLastname">
+				<div class="form__group--input">
+					<input
+						type="text"
+						name="clientLastname"
+						class="input"
+						placeholder="Apellido"
+					/>
+					<i class="bi"></i>
+				</div>
+				<p class="form__error">El apellido tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
+			</div>
+			<div class="form__group" id="group__clientEmail">
+				<div class="form__group--input">
+					<input
+						type="text"
+						name="clientEmail"
+						class="input"
+						placeholder="Email"
+					/>
+					<i class="bi"></i>
+				</div>
+				<p class="form__error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+			</div>
+			<div class="form__group" id="group__clientPhone">
+				<div class="form__group--input">
+					<input
+						type="text"
+						name="clientPhone"
+						class="input"
+						placeholder="Teléfono"
+					/>
+					<i class="bi"></i>
+				</div>
+				<p class="form__error">El teléfono solo puede contener numeros y el maximo son 14 dígitos.</p>
+			</div>
+            <div class="form__group" id="group__clientCity">
+				<div class="form__group--input">
+					<input
+						type="text"
+						name="clientCity"
+						class="input"
+						placeholder="Ciudad"
+					/>
+					<i class="bi"></i>
+				</div>
+				<p class="form__error">Este campo es necesario para su solicitud</p>
+			</div>
+            <div class="form__group" id="group__clientState">
+				<div class="form__group--input">
+					<input
+						type="text"
+						name="clientState"
+						class="input"
+						placeholder="Estado"
+					/>
+					<i class="bi"></i>
+				</div>
+				<p class="form__error">Este campo es necesario para su solicitud</p>
+			</div>
         </div>
 
         <div class="order__form--delivery">

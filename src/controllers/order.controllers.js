@@ -17,14 +17,14 @@ orderCtrl.addNewOrder = async (req, res) => {
 		user: req.user.id,
 	});
 	// Guardando datos de la compra
-	newOrder.order.name = req.body.name;
-	newOrder.order.lastname = req.body.lastname;
-	newOrder.order.phone = req.body.phone;
-	newOrder.order.email = req.body.email;
+	newOrder.order.name = req.body.clientName;
+	newOrder.order.lastname = req.body.clientLastname;
+	newOrder.order.email = req.body.clientEmail;
+	newOrder.order.phone = req.body.clientPhone;
+	newOrder.order.city = req.body.clientCity;
+	newOrder.order.state = req.body.clientState;
 	newOrder.order.method = req.body.method;
 	newOrder.order.delivery = req.body.delivery;
-	newOrder.order.city = req.body.city;
-	newOrder.order.state = req.body.state;
 	newOrder.order.products = await Cart.find({ user: req.user.id });
 
 	await newOrder.save();
@@ -45,26 +45,26 @@ orderCtrl.addNewOrder = async (req, res) => {
 
 	// Destructuring del cuerpo de la petición
 	const {
-		name,
-		lastname,
-		phone,
-		email,
+		clientName,
+		clientLastname,
+		clientEmail,
+		clientPhone,
 		method,
 		delivery,
-		city,
-		state,
+		clientCity,
+		clientState,
 	} = req.body;
 
 	// Contenido del pedido
 	contentHTML = `<h1>Orden de compra</h1>
 	<h3>Datos del usuario</h3>
 	<ul>
-		<li><b>Nombre</b>: ${name}</li>
-		<li><b>Apellido</b>: ${lastname}</li>
-		<li><b>Teléfono</b>: ${phone}</li>
-		<li><b>Correo</b>: ${email}</li>
-		<li><b>Ciudad</b>: ${city}</li>
-		<li><b>Estado</b>: ${state}</li>
+		<li><b>Nombre</b>: ${clientName}</li>
+		<li><b>Apellido</b>: ${clientLastname}</li>
+		<li><b>Teléfono</b>: ${clientPhone}</li>
+		<li><b>Correo</b>: ${clientEmail}</li>
+		<li><b>Ciudad</b>: ${clientCity}</li>
+		<li><b>Estado</b>: ${clientState}</li>
 	</ul>
 	<h3>Datos de la compra</h3>
 	<ul>

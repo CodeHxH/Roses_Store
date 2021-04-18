@@ -2,9 +2,16 @@
 	padding: 1em;
 
 	.form__group {
-		margin-bottom: 0.5em;
-		padding: 0.5em;
-		border-bottom: 2px solid rgb(196, 196, 196);
+		margin-bottom: 0.75em;
+		padding: 0.65em;
+		border-bottom: 2px solid rgb(226, 226, 226);
+
+		p {
+			display: none;
+			color: #000;
+			font-size: 0.8em;
+			margin: 1em 0 0.25em 0.5em;
+		}
 
 		.form__group--input {
 			display: grid;
@@ -47,6 +54,11 @@
 		i {
 			color: $success;
 		}
+
+		p {
+			display: none;
+			color: $success;
+		}
 	}
 }
 
@@ -55,6 +67,10 @@
 		border-bottom: 2px solid rgb(230, 35, 35);
 
 		i {
+			color: rgb(230, 35, 35);
+		}
+		p {
+			display: flex;
 			color: rgb(230, 35, 35);
 		}
 	}

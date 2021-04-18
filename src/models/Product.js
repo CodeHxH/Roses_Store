@@ -6,6 +6,7 @@ const ProductSchema = new Schema(
 		price: { type: Number, required: true, unique: true },
 		description: { type: String, required: true },
 		label: { type: {}, required: true },
+		categoria: { type: String },
 		img: { type: String, required: true },
 	},
 	{

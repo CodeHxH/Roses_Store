@@ -1,5 +1,5 @@
 const formulario = document.getElementById('form');
-const inputs = document.querySelectorAll('#form input');
+const inputs = document.querySelectorAll('.form input');
 
 // Expresiones regulares
 const expressions = {
@@ -14,6 +14,12 @@ const fields = {
 	lastname: false,
 	email: false,
 	phone: false,
+	clientName: false,
+	clientLastname: false,
+	clientEmail: false,
+	clientPhone: false,
+	clientCity: false,
+	clientState: false,
 };
 
 // Validando campos
@@ -58,6 +64,24 @@ const validateForm = (input) => {
 			break;
 		case 'phone':
 			validateField(expressions.phone, input.target, 'phone');
+			break;
+		case 'clientName':
+			validateField(expressions.name, input.target, 'clientName');
+			break;
+		case 'clientLastname':
+			validateField(expressions.name, input.target, 'clientLastname');
+			break;
+		case 'clientEmail':
+			validateField(expressions.email, input.target, 'clientEmail');
+			break;
+		case 'clientPhone':
+			validateField(expressions.phone, input.target, 'clientPhone');
+			break;
+		case 'clientCity':
+			validateField(expressions.name, input.target, 'clientCity');
+			break;
+		case 'clientState':
+			validateField(expressions.name, input.target, 'clientState');
 			break;
 	}
 };

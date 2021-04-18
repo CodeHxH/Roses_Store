@@ -1,5 +1,5 @@
 .order {
-	padding: 1em;
+	padding: 1em 0.5em;
 	display: flex;
 	flex-direction: column;
 	max-width: $max-width;
@@ -13,6 +13,14 @@
 	}
 }
 
+.order__title {
+	text-align: center;
+	font-size: 1.5em;
+	padding: 1em;
+	padding-bottom: 0;
+	font-weight: 400;
+}
+
 .order__form {
 	background: #fff;
 	box-shadow: 0 0 5px black;
@@ -24,25 +32,15 @@
 	border-radius: 5px;
 	margin: 0.5em 0;
 
-	p {
+	* {
+		width: 100%;
+	}
+
+	.center {
 		color: $third-color;
 		margin: 1rem 0;
 		font-size: 1.25em;
 		font-weight: 400;
-	}
-
-	input {
-		padding: 0.5em;
-		margin: 0.5em;
-		width: 100%;
-		border: none;
-		background: none;
-		border-bottom: 2px solid rgb(230, 230, 230);
-	}
-
-	input:focus {
-		background: linear-gradient(transparent, rgb(235, 235, 235));
-		border-bottom: 2px solid $primary-color;
 	}
 
 	input::placeholder {
@@ -62,9 +60,10 @@
 
 	.subtitle {
 		text-align: center;
-		padding: 1em 0;
+		padding: 1em;
 		font-size: 1.25em;
 		font-weight: 400;
+		margin: auto;
 	}
 
 	.center {
