@@ -6,7 +6,7 @@ searchBar.addEventListener('keyup', (input) => {
 	console.log('hola');
 	products.forEach((product) => {
 		const productLabel = product.dataset.etiquetas;
-		const compare = productLabel.indexOf(input.target.value);
+		const compare = productLabel.indexOf(input.target.value.toLowerCase());
 		if (compare >= 0) {
 			product.classList.remove('hiden');
 		} else {
