@@ -7,6 +7,10 @@
 	gap: 1em;
 }
 
+.catalogo.grid {
+	min-height: 500px;
+}
+
 .product__card {
 	display: flex;
 	flex-direction: column;

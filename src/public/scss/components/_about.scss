@@ -18,13 +18,23 @@ section {
 	}
 
 	.pay__steps {
+		.step {
+			display: block;
+			margin-bottom: 1rem;
+			font-size: 1.25em;
+		}
+
 		i {
 			font-size: 100px;
 			margin: 25px;
 		}
 
 		div {
+			box-shadow: 0 0 5px black;
 			display: flex;
+			padding: 1em;
+			margin-top: 2em;
+			border-radius: 5px;
 			flex-direction: column;
 			align-items: center;
 		}
